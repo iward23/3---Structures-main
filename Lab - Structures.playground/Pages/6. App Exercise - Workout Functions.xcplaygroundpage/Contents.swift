@@ -10,14 +10,20 @@ struct RunningWorkout {
     var time: Double
     var elevation: Double
     
+    func postWorkoutStats(){
+        print("You ran \(distance) miles for \(time) minutes with \(elevation) elevation")
+    }
 }
-
+var a = RunningWorkout(distance: 2.3, time: 15.5, elevation: 1.5)
 
 //:  A `Steps` struct has been created for you below, representing the day's step-tracking data. It has the goal number of steps for the day and the number of steps taken so far. Create a method on `Steps` called `takeStep` that increments the value of `steps` by one. Then create an instance of `Steps` and call `takeStep()`. Print the value of the instance's `steps` property before and after the method call.
 struct Steps {
     var steps: Int
     var goal: Int
     
+    mutating func takeSteps(){
+        steps += 1
+    }
 }
 
 

@@ -12,6 +12,11 @@ struct RunningWorkout {
     var time: Double
     var elevation: Double
     
+    var averageMileTime: Double{
+        time / distance * 1600
+    }
+    
+    func 
 }
 
 
